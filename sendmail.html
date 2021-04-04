@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Yatra+One&display=swap" rel="stylesheet">
+<style>
+.myDIV{font-family: 'Yatra One', cursive;}
+</style>
+</head>
+<body>
+
+<p>Click the button to swap the text of the DIV element:</p>
+
+<p><button onclick="myFunction()">Click Me</button></p>
+
+<div id="myDIV">Hello</div>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myDIV");
+  if (x.innerHTML === "Hello") {
+    x.innerHTML = "MY name is kiran savekar";
+  } else {
+    x.innerHTML = "Hello";
+  }
+}
+</script>
+
+</body>
+</html>
+
