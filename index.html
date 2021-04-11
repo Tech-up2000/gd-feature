@@ -1,32 +1,231 @@
 <!DOCTYPE html>
-<html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Yatra+One&display=swap" rel="stylesheet">
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Girnari Datta Enterprises</title>
+		<meta name="description" content="Girnari Datta" />
+		<meta name="keywords" content="" />
+		<meta name="author" content="TechUp Web Ventures" />
+
 <style>
-.myDIV{font-family: 'Yatra One', cursive;}
-</style>
-</head>
-<body>
+ 
 
-<p>Click the button to swap the text of the DIV element:</p>
+body {
+  margin: 0;
+  padding: 0;
+  font-family: arial;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /*background-color: #333;*/
+  min-height: 100vh;
+}
 
-<p><button onclick="myFunction()">Click Me</button></p>
+.feature-section-container {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  margin: 0px;
+}
+.feature-section-container .feature-section-container-card {
+  position: relative;
+  margin: 25px;
+  width: 300px;
+  height: 200px;
+  transition: margin 0.5s;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.8);
+}
+.feature-section-container .feature-section-container-card:hover {
+  box-shadow: 0 0px 80px rgba(0, 0, 0, 0.2);
+  margin: 100px 25px;
+}
+.feature-section-container .feature-section-container-card:hover .feature-face.card-header {
+  background-color: #01579b;
+  box-shadow: 0 -20px 50px rgba(0, 0, 0, 0.6);
+  transform: translateY(-100px);
+}
+.feature-section-container .feature-section-container-card:hover .feature-face.card-header .feature-content {
+  opacity: 1;
+}
+.feature-section-container .feature-section-container-card:hover .feature-face.card-footer {
+  transform: translateY(100px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+}
+.feature-section-container .feature-face {
+  max-width: 300px;
+  height: 200px;
+  transition: 0.5s;
+}
+.feature-section-container .feature-face.card-header {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: white;/*****************************Front Card Color*****************************/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+.feature-section-container .feature-face.card-header .feature-content {
+  transition: 0.5s;
+}
+.feature-section-container .feature-face.card-header .feature-content img {
+  max-width: 100px;
+}
+.feature-section-container .feature-face.card-header .feature-content h3 {
+  margin: 10px 0 0;
+  padding: 0;
+  color: Blue;  /*****************************Card Heading Color*****************************/
+  text-align: center;
+  font-size: 1.5em;
+}
+.feature-section-container .feature-face.card-footer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.feature-section-container .feature-face.card-footer p {
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+}
+.feature-section-container .feature-face.card-footer a {
+  margin: 15px 0 0;
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 900;
+  color: #333;
+  border: 1px solid #333;
+  padding: 5px;
+}
+.feature-section-container .feature-face.card-footer a:hover {
+  background-color: #333;
+  color: #fff;
+}
 
-<div id="myDIV">Hello</div>
+@media screen and (max-width: 768px) {
+  .feature-section-container {
+    flex-direction: column;
+    height: 100vh;
+  }
 
-<script>
-function myFunction() {
-  var x = document.getElementById("myDIV");
-  if (x.innerHTML === "Hello") {
-    x.innerHTML = "माझे नाव किरण सावेकर आहे.";
-  } else {
-    x.innerHTML = "Hello";
+  .feature-section-container-card:hover {
+    margin: 25px;
   }
 }
-</script>
 
+
+@media screen and (max-width: 420px) {
+  .feature-section-container {
+    flex-direction: column;
+    width:50%;
+    height: 100%;
+    margin-left:-40%;
+  }
+  
+}
+
+@media screen and (max-width: 360px) {
+  .feature-section-container {
+    flex-direction: column;
+    width:50%;
+    height: 100%;
+    margin-left:-50%;
+  }
+  
+}
+
+@media screen and (max-width: 320px) {
+  .feature-section-container {
+    flex-direction: column;
+    width:50%;
+    height: 100%;
+    margin-left:-60%;
+  }
+  
+}
+
+@media screen and (max-width: 290px) {
+  .feature-section-container {
+    flex-direction: column;
+    width:50%;
+    height: 100%;
+    margin-left:-0%;
+  }
+  
+}
+
+
+</style>
+
+</head>
+
+<body>
+    <div class="feature-section-container">
+  
+  <div class="feature-section-container-card">
+    
+    <div class="feature-face card-header">
+      <div class="feature-content">
+        <img src="https://i.ibb.co/mN7DzqR/sketch.png" alt="">
+        <h3>Design</h3>
+      </div>
+    </div>
+    
+    <div class="feature-face card-footer">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit.Impedit, dolorum suscipit? Esse modi explicabo quos non libero dolorem laudantium tenet
+      </p>
+      <a href="#">Read More</a>
+    </div>
+    
+  </div>
+  
+  <div class="feature-section-container-card">
+    
+    <div class="feature-face card-header">
+      <div class="feature-content">
+        <img src="https://i.ibb.co/D47wpw7/data.png" alt="">
+        <h3>Code</h3>
+      </div>
+    </div>
+    
+    <div class="feature-face card-footer">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit.Impedit, dolorum suscipit? Esse modi explicabo quos non libero dolorem laudantium tenet
+      </p>
+      <a href="#">Read More</a>
+    </div>
+    
+  </div>
+  
+  <div class="feature-section-container-card">
+    
+    <div class="feature-face card-header">
+      <div class="feature-content">
+        <img src="https://i.ibb.co/VQBV0Bd/launch.png" alt="">
+        <h3>Launch</h3>
+      </div>
+    </div>
+    
+    <div class="feature-face card-footer">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit.Impedit, dolorum suscipit? Esse modi explicabo quos non libero dolorem laudantium tenet
+      </p>
+      <a href="#">Read More</a>
+    </div>
+    
+  </div>
+</div>
 </body>
-</html>
 
+</html>
